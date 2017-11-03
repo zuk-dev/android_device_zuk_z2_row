@@ -1,0 +1,2 @@
+# Sensors
+system_init.startsensorservice=1

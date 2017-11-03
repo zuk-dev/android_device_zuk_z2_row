@@ -17,6 +17,7 @@ vendor/lib/libchromatix_s5k2m8sx_cpp_hfr_120.so
 vendor/lib/libchromatix_ov8865_default_video_none.so
 vendor/lib/libchromatix_ov8865_cpp_hfr_90.so
 vendor/lib/libchromatix_s5k2m8sx_liveshot.so
+vendor/lib/sensors.maxim-bio.so
 vendor/lib/libchromatix_s5k2m8sx_postproc.so
 vendor/lib/libchromatix_s5k2m8sx_cpp_snapshot.so
 vendor/lib/libchromatix_ov8865_hfr_120_none.so
@@ -52,6 +53,10 @@ vendor/lib/libchromatix_ov8865_snapshot.so
 vendor/lib/libchromatix_s5k2m8sx_hfr_120.so
 vendor/lib/libchromatix_s5k2m8sx_cpp_liveshot.so
 vendor/lib/libchromatix_ov8865_hfr_120.so
+vendor/etc/sensors/hals.conf
+vendor/etc/sensors/sensor_def_qcomdev.conf
+vendor/lib64/sensors.maxim-bio.so
+lib/libsensorservice.so
 etc/acdbdata/MTP/MTP_General_cal.acdb
 etc/acdbdata/MTP/MTP_Handset_cal.acdb
 etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
@@ -65,6 +70,7 @@ etc/xtra_root_cert.pem
 etc/capability.xml
 etc/camera/s5k2m8sx_chromatix.xml
 etc/camera/msm8996_camera.xml
+etc/permissions/com.maxim.biosensor.xml
 etc/tfa98xx/shenqi_speech.eq
 etc/tfa98xx/shenqi_speech.preset
 etc/tfa98xx/shenqi_music.eq
@@ -73,3 +79,6 @@ etc/tfa98xx/shenqi.speaker
 etc/tfa98xx/TFA9890_N1B12_N1C3_v2.config
 etc/tfa98xx/TFA9890_N1C3_2_1_1.patch
 etc/tfa98xx/shenqi_music.preset
+lib64/libsensorservice.so
+bin/sensorservice
+framework/com.maxim.biosensor.jar

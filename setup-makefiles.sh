@@ -47,6 +47,14 @@ done
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor.mk
 
+(cat << EOF) >> $MAKEFILE
+
+PRODUCT_PACKAGES += \\
+    LSF-User-Phone \\
+    LSF \\
+    XuiUHealth
+EOF
+
 (cat << EOF) > ../../../$OUTDIR/BoardConfigVendor.mk
 # Copyright (C) 2016 The CyanogenMod Project
 #
@@ -84,6 +92,42 @@ EOF
 LOCAL_PATH := \$(call my-dir)
 
 ifeq (\$(TARGET_DEVICE),z2_row)
+
+include \$(CLEAR_VARS)
+LOCAL_MODULE := LSF-User-Phone
+LOCAL_MODULE_OWNER := zuk
+LOCAL_SRC_FILES := proprietary/priv-app/LSF-User-Phone/LSF-User-Phone.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+include \$(BUILD_PREBUILT)
+
+include \$(CLEAR_VARS)
+LOCAL_MODULE := LSF
+LOCAL_MODULE_OWNER := zuk
+LOCAL_SRC_FILES := proprietary/priv-app/LSF/LSF.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+include \$(BUILD_PREBUILT)
+
+include \$(CLEAR_VARS)
+LOCAL_MODULE := XuiUHealth
+LOCAL_MODULE_OWNER := zuk
+LOCAL_SRC_FILES := proprietary/priv-app/XuiUHealth/XuiUHealth.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+include \$(BUILD_PREBUILT)
 
 endif
 EOF

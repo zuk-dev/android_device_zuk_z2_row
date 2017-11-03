@@ -35,5 +35,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     lights.msm8996
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    init.qcom.usb.rc \
+    init.zuk.rc
+
 # Inherit from msm8996-common
 $(call inherit-product, device/zuk/msm8996-common/msm8996.mk)
