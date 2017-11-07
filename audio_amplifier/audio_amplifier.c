@@ -17,7 +17,7 @@
 
 #include <time.h>
 #include <system/audio.h>
-#include <platform.h>
+#include "platform.h"
 
 #include <stdio.h>
 #include <stdlib.h>
