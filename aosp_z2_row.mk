@@ -40,3 +40,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Gapps
 TARGET_ARCH := arm64
+
+# Gcamera
+PRODUCT_PACKAGES += \
+    GoogleCamera
