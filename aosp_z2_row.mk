@@ -21,7 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/zuk/z2_row/device.mk)
 
 # Inherit some common AOSP-OMS stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 PRODUCT_NAME := aosp_z2_row
 PRODUCT_DEVICE := z2_row
@@ -37,3 +37,6 @@ TARGET_VENDOR := zuk
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT="ZUK/z2_row/z2_row:7.0/NRD90M/3.1.194_171110:user/release-keys" \
     PRIVATE_BUILD_DESC="z2_row-user 7.0 NRD90M 3.1.194_171110 release-keys"
+
+# Gapps
+TARGET_ARCH := arm64
