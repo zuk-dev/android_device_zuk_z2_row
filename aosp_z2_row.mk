@@ -43,6 +43,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Gapps
 TARGET_ARCH := arm64
+TARGET_DENSITY := xxhdpi
 
 # Gcamera
 PRODUCT_PACKAGES += \
